@@ -1,0 +1,50 @@
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+#header h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+#top-left-logo {
+  height: 35px;
+  width: 35px;
+  object-fit: contain;
+}
+
+#top-right-logo {
+  height: 35px;
+  width: 35px;
+  object-fit: contain;
+}
+
+#footer {
+  background-color: #f8f9fa;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+#footer p {
+  margin: 0;
+  color: #6c757d;
+  font-size: 14px;
+}
+#footer a {
+  color: #007bff;
+  text-decoration: none;
+}
+#footer a:hover {
+  text-decoration: underline;
+}
