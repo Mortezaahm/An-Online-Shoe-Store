@@ -1,3 +1,9 @@
+h1,
+h2 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 700;
+}
+
 #header {
   display: flex;
   align-items: center;
@@ -23,15 +29,109 @@
   object-fit: contain;
 }
 
+.slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  max-height: 60vh;
+}
+
+.slides {
+  display: flex;
+  animation: slide 16s steps(4) infinite;
+  will-change: transform;
+  animation-timing-function: ease-in-out;
+}
+
+.slide {
+  flex: 0 0 100%; /* Prevent shrinking/growing, take 100% of container width */
+  position: relative;
+  aspect-ratio: 16/9; /* Maintain aspect ratio */
+  overflow: hidden;
+}
+
+.slides img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover; /* Cover the container */
+  z-index: 1;
+}
+
+.slide::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0));
+  z-index: 2;
+}
+
+.slide-content {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+  z-index: 3;
+}
+
+.slide-content h2 {
+  margin: 0 0 8px 0;
+  font-size: 1.2rem;
+  line-height: 1.1;
+}
+
+.slide-content .btn {
+  display: inline-block;
+  padding: 8px 16px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  z-index: 3;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0%);
+  }
+  20% {
+    transform: translateX(0%);
+  }
+  30% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(-100%);
+  }
+  60% {
+    transform: translateX(-200%);
+  }
+  80% {
+    transform: translateX(-200%);
+  }
+  90% {
+    transform: translateX(-300%);
+  }
+  100% {
+    transform: translateX(-300%);
+  }
+}
+
 #footer {
   background-color: #f8f9fa;
   text-align: center;
   padding: 10px 0;
   margin-top: 20px;
   display: flex;
-  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
-  position: fixed;
+  /* position: fixed; */
   bottom: 0;
   left: 0;
   width: 100%;
@@ -47,4 +147,28 @@
 }
 #footer a:hover {
   text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) and (min-width: 980px) {
+  #footer {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px 0;
+  }
+
+  .slider {
+    max-height: 420px;
+  }
+
+  .slide {
+    aspect-ratio: 16/6;
+  }
+
+  .slide-content h2 {
+    font-size: 1.6rem;
+  }
+  .slide-content {
+    left: 32px;
+    bottom: 24px;
+  }
 }
