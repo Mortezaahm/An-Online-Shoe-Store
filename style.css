@@ -9,10 +9,21 @@
   --overlay: rgba(0, 0, 0, 0.45);
 
   /* button alpha variants */
-  --accent-50: rgba(224, 102, 97, 0.5); /* your older value */
+  --accent-50: rgba(224, 102, 97, 0.5); /* older value */
   --accent-90: rgba(224, 102, 97, 0.9);
-  --primary-50: rgba(0, 78, 114, 0.5); /* you used */
+  --primary-50: rgba(0, 78, 114, 0.5); /* used */
   --primary-90: rgba(0, 78, 114, 0.9);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  overflow-x: hidden;
 }
 
 h1,
@@ -171,6 +182,14 @@ h2 {
   flex-wrap: wrap;
 }
 
+#container.container {
+  position: relative;
+  padding-left: 74px;
+  padding-right: 74px;
+  align-items: center;
+  justify-content: center;
+}
+
 .card {
   background-color: rgba(189, 176, 38, 0.15);
   position: relative;
@@ -184,8 +203,6 @@ h2 {
   flex-direction: column;
   align-items: stretch;
   flex: 1 1 calc(25% - 40px);
-  max-width: 280px;
-  min-width: 220px;
 }
 
 .card-media {
@@ -214,7 +231,7 @@ h2 {
 }
 
 .card img:hover {
-  transform: scale(1.3);
+  transform: scale(1.13);
 }
 
 .card-content h4 {
@@ -230,26 +247,49 @@ h2 {
   line-height: 1.3;
 }
 
-.arrow {
-  background-color: transparent;
-  border: 0;
-  cursor: pointer;
-  position: absolute;
-  top: 30%;
-  transform: translateY(-50%);
-  font-size: 1rem;
-  color: black;
-  opacity: 0.5;
+.card-content .original-price {
+  font-size: 0.9rem;
+  color: #555;
+  text-decoration: line-through;
 }
-.arrow:hover {
-  opacity: 1;
+
+.card-content .discounted-price {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+#container .arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  font-size: 3rem;
+  opacity: 0.5;
+  background: none;
 }
 
 .left-arrow {
-  right: 30px;
+  left: 1rem;
 }
+
 .right-arrow {
-  right: 10px;
+  right: 1rem;
+}
+
+#container .arrow:hover,
+#container .arrow:focus {
+  opacity: 1;
+  color: var(--color-accent);
+  transform: translateY(-50%) scale(1.1);
+  transition: transform 0.3s ease, color 0.3s ease, opacity 0.3s ease;
 }
 
 /* Footer styles */
@@ -290,11 +330,16 @@ h2 {
   }
 
   .card {
-    flex: 1 1 100%;
+    min-width: 0;
     max-width: 100%;
+    flex: 1 1 100%;
   }
   .card-media {
-    height: 180px; /* کمی کوتاه‌تر برای موبایل */
+    height: 180px;
+  }
+
+  #container .arrow {
+    display: none;
   }
 
   #footer {
