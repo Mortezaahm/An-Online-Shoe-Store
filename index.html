@@ -20,6 +20,10 @@
     <link rel="stylesheet" href="style.css" />
 
     <title>Shoe Store Step In Style</title>
+    <meta
+      name="description"
+      content="Step In Style — A responsive shoe store prototype. Find performance, casual, sport and formal shoes. Accessible, mobile-first layout. Online shopping."
+    />
   </head>
   <body>
     <header class="bg-info text-dark text-center py-3" id="header">
@@ -98,7 +102,10 @@
     <section class="slider" aria-label="Featured shoes">
       <div class="slides">
         <div class="slide">
-          <img src="./images/shoe-1.jpg" alt="Red running shoe" />
+          <img
+            src="./images/shoe-1.jpg"
+            alt="Running shoe - Performance collection"
+          />
           <div class="slide-content">
             <h2>Performance</h2>
             <a class="btn" href="#">Read more</a>
@@ -133,56 +140,69 @@
 
     <main>
       <!-- Main Content -->
-      <div id="container" class="container">
-        <div class="card text-left">
-          <div class="card-media">
-            <img src="./images/shoe-3.jpg" alt="Discounted shoes" />
+      <section id="deals" class="deals-section">
+        <h2 class="text-center my-4">Discounted Shoes</h2>
+        <div id="container" class="container">
+          <div class="card text-left">
+            <div class="card-media">
+              <img src="./images/shoe-3.jpg" alt="Discounted shoes" />
+            </div>
+            <div class="card-content">
+              <h4>SO ALL, Sneakers</h4>
+              <p class="original-price">Original price: 549kr</p>
+              <p class="discounted-price">Discounted price: 199kr</p>
+            </div>
           </div>
-          <div class="card-content">
-            <h4>SO ALL, Sneakers</h4>
-            <p class="original-price">Original price: 549kr</p>
-            <p class="discounted-price">Discounted price: 199kr</p>
-          </div>
-        </div>
 
-        <div class="card text-left">
-          <div class="card-media">
-            <img src="./images/shoe-2.jpg" alt="Discounted shoes" />
+          <div class="card text-left">
+            <div class="card-media">
+              <img src="./images/shoe-2.jpg" alt="Discounted shoes" />
+            </div>
+            <div class="card-content">
+              <h4>PACE, Sneakers</h4>
+              <p class="original-price">Original price: 649kr</p>
+              <p class="discounted-price">Discounted price: 299kr</p>
+            </div>
           </div>
-          <div class="card-content">
-            <h4>PACE, Sneakers</h4>
-            <p class="original-price">Original price: 649kr</p>
-            <p class="discounted-price">Discounted price: 299kr</p>
-          </div>
-        </div>
 
-        <div class="card text-left">
-          <div class="card-media">
-            <img src="./images/shoe-4.jpg" alt="Discounted shoes" />
+          <div class="card text-left">
+            <div class="card-media">
+              <img src="./images/shoe-4.jpg" alt="Discounted shoes" />
+            </div>
+            <div class="card-content">
+              <h4>ATTITUDE, Sneakers</h4>
+              <p class="original-price">Original price: 449kr</p>
+              <p class="discounted-price">Discounted price: 150kr</p>
+            </div>
           </div>
-          <div class="card-content">
-            <h4>ATTITUDE, Sneakers</h4>
-            <p class="original-price">Original price: 449kr</p>
-            <p class="discounted-price">Discounted price: 150kr</p>
+          <div class="card text-left">
+            <div class="card-media">
+              <img src="./images/shoe-1.jpg" alt="Discounted shoes" />
+            </div>
+            <div class="card-content">
+              <h4>LINEAR, Sneakers</h4>
+              <p class="original-price">Original price: 499kr</p>
+              <p class="discounted-price">Discounted price: 250kr</p>
+            </div>
           </div>
+          <button
+            id="left"
+            class="left-arrow arrow"
+            type="button"
+            aria-label="Previous deals"
+          >
+            <i class="fas fa-chevron-left" aria-hidden="true"></i>
+          </button>
+          <button
+            id="right"
+            class="right-arrow arrow"
+            type="button"
+            aria-label="Next deals"
+          >
+            <i class="fas fa-chevron-right" aria-hidden="true"></i>
+          </button>
         </div>
-        <div class="card text-left">
-          <div class="card-media">
-            <img src="./images/shoe-1.jpg" alt="Discounted shoes" />
-          </div>
-          <div class="card-content">
-            <h4>LINEAR, Sneakers</h4>
-            <p class="original-price">Original price: 499kr</p>
-            <p class="discounted-price">Discounted price: 250kr</p>
-          </div>
-        </div>
-        <button id="left" class="left-arrow arrow">
-          <i class="fas fa-chevron-left"></i>
-        </button>
-        <button id="right" class="right-arrow arrow">
-          <i class="fas fa-chevron-right"></i>
-        </button>
-      </div>
+      </section>
       <section id="about" class="main-content">
         <h2 class="text-center my-4">About Step In Style</h2>
         <div class="row">
@@ -194,7 +214,7 @@
               timeless classics, or comfortable everyday wear, we've got you
               covered. Our extensive collection features footwear for men,
               women, and children, ensuring that everyone can find their perfect
-              pair.<br />
+              pair.
               <span><a href="#">Read More about us</a></span>
             </p>
           </article>
@@ -208,7 +228,7 @@
               styles, preferences, and occasions. From casual sneakers to
               elegant heels, rugged boots to stylish sandals, we source our
               products from reputable brands known for their quality and
-              craftsmanship.<br />
+              craftsmanship.
               <span><a href="#">Read More about our collection</a></span>
             </p>
           </article>
@@ -220,7 +240,7 @@
               size, color, brand, and price, and read detailed product
               descriptions and customer reviews. We also offer a secure checkout
               process and multiple payment options to ensure a smooth shopping
-              experience.<br />
+              experience.
               <span><a href="#">Read More about our collection</a></span>
             </p>
           </article>

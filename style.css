@@ -171,6 +171,11 @@ h2 {
 
 /* Card styles */
 
+.section-heading {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
 .container {
   display: flex;
   justify-content: center;
@@ -292,6 +297,16 @@ h2 {
   transition: transform 0.3s ease, color 0.3s ease, opacity 0.3s ease;
 }
 
+.arrow:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 5px;
+}
+
+.main-content p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
 /* Footer styles */
 
 #footer {
@@ -358,6 +373,19 @@ h2 {
   }
 
   .slide-content h2 {
-    font-size: 1.6rem;
+    font-size: 1.3rem;
+  }
+}
+
+/* Medium and larger screens */
+
+@media (min-width: 768px) {
+  .container {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+  .card {
+    flex: 1 1 calc(25% - 24px);
+    min-width: 0;
   }
 }
